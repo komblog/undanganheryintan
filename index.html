@@ -130,7 +130,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Hello!</h2>
-					<h3>Kak Fretty & Keluarga</h3>
+					<h3 id="invitationName"></h3>
 					<p>We invited you to celebrate our wedding</p>
 				</div>
 			</div>
@@ -308,11 +308,11 @@
 							</div>
 					</li>
 
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/DSC05642-Edit.jpg); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/DSC05384.JPG); ">
 								<div class="case-studies-summary">
 								</div>
 						</li>
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/DSC05384.JPG); ">
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/DSC05642-Edit.jpg); ">
 								<div class="case-studies-summary">
 								</div>
 						</li>
@@ -609,6 +609,14 @@
         day: 7,
         enableUtc: false
     });
+
+	const queryParams = new URLSearchParams(window.location.search);
+	let name = queryParams.get('to');
+	let newName = name.replace("+", " ")
+
+	window.onload = function(){
+		document.getElementById('invitationName').innerHTML = newName;
+	}
 </script>
 
 	</body>
