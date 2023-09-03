@@ -587,39 +587,38 @@
 	<script src="js/main.js"></script>
 
 	<script>
-    // var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+		var queryParams = new URLSearchParams(window.location.search);
+		console.log("testtt")
+		var name = queryParams.get('to');
+		var newName = name.replace("+", " ")
+
+		console.log(name)
+		console.log(newName)
+		window.onload = function(){
+			document.getElementById('invitationName').innerHTML = newName;
+		}
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: 2023,
-        month: 10,
-        day: 7
-    });
+		// default example
+		simplyCountdown('.simply-countdown-one', {
+			year: 2023,
+			month: 10,
+			day: 7
+		});
 
-    //jQuery example
-    // $('#simply-countdown-losange').simplyCountdown({
-    //     year: d.getFullYear(),
-    //     month: d.getMonth() + 1,
-    //     day: d.getDate(),
-    //     enableUtc: false
-    // });
-	$('#simply-countdown-losange').simplyCountdown({
-        year: 2023,
-        month: 10,
-        day: 7,
-        enableUtc: false
-    });
-
-	const queryParams = new URLSearchParams(window.location.search);
-	let name = queryParams.get('to');
-	let newName = name.replace("+", " ")
-
-	console.log(name)
-	console.log(newName)
-	window.onload = function(){
-		document.getElementById('invitationName').innerHTML = newName;
-	}
-</script>
+		//jQuery example
+		// $('#simply-countdown-losange').simplyCountdown({
+		//     year: d.getFullYear(),
+		//     month: d.getMonth() + 1,
+		//     day: d.getDate(),
+		//     enableUtc: false
+		// });
+		$('#simply-countdown-losange').simplyCountdown({
+			year: 2023,
+			month: 10,
+			day: 7,
+			enableUtc: false
+		});	
+	</script>
 
 	</body>
 </html>
