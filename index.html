@@ -291,7 +291,7 @@
 				<div class="col-md-12">
 					<ul id="fh5co-gallery-list">
 						
-						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/DSC05803.JPG); "> 
+						<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/compress.jpg); "> 
 							<div class="case-studies-summary">
 							</div>
 					</li>
@@ -591,10 +591,14 @@
 
 	<script>
 		var queryParams = new URLSearchParams(window.location.search);
-		console.log("testtt")
-		var name = queryParams.get('to');
-		var newName = name.replace("+", " ")
-		document.getElementById('invitationName').innerHTML = newName;
+		var name = ""
+
+		if (queryParams.has('to')) {
+			name = queryParams.get('to');
+			name.replace("+", " ")
+		}
+		
+		document.getElementById('invitationName').innerHTML = name;
 		
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
 		// default example
