@@ -614,6 +614,8 @@
 	let name = queryParams.get('to');
 	let newName = name.replace("+", " ")
 
+	console.log(name)
+	console.log(newName)
 	window.onload = function(){
 		document.getElementById('invitationName').innerHTML = newName;
 	}
