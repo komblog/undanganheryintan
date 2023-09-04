@@ -516,8 +516,7 @@
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
-			<embed name="OnlyYou" src="https://audio.jukehost.co.uk/uOUvYrsOUnDv4NkTUYcMTJ6LgChnxK0V" loop="true" hidden="false" autostart="true">
-
+			<audio src="https://audio.jukehost.co.uk/uOUvYrsOUnDv4NkTUYcMTJ6LgChnxK0V" id="my_audio" loop="loop"></audio>
 			<div class="row copyright">
 				<div class="col-md-12 text-center">
 					<p>
@@ -568,6 +567,9 @@
 	<script src="js/main.js"></script>
 
 	<script>
+		window.onload=function(){
+			document.getElementById("my_audio").play();
+		}
 		var queryParams = new URLSearchParams(window.location.search);
 		var name = ""
 
