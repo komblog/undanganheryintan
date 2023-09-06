@@ -428,6 +428,9 @@ h1, h2, h3, h4, h5, h6, figure {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+#fh5co-gift .p, #fh5co-gift h2, #fh5co-gift .event-wrap h1,
+#fh5co-gift .event-wrap p,
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
